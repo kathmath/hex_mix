@@ -1,0 +1,25 @@
+{
+  "name": "hex_colors",
+  "version": "0.0.1",
+  "description": "grunt for hex_colors",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kathmath/hex_mix.git"
+  },
+  "author": "kathmath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kathmath/hex_mix/issues"
+  },
+  "homepage": "https://github.com/kathmath/hex_mix#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-postcss": "^0.5.4",
+    "grunt-sass": "^1.0.0"
+  }
+}

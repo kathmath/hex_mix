@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  margin: 40px 0;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+input {
+  width: 50%;
+  border-radius: 10px;
+  padding: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.mix {
+  width: 50%;
+  border-radius: 10px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 6px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.chip_container, .input_containter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1em;   
+}
+
+
+.chip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 0.6em;
+}
+
+
+@media (min-width: 500px) { 
+
+  input, .mix {
+    width: 30%;
+  }
+
+  .main {
+    max-width: 60em;
+  }
+
+  .chip_container, .input_container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .chip {
+    height: 8rem;
+    width: 18%;
+  }
+
+}
+

@@ -3,21 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hexmix</title>
+    <title>HexMix</title>
     <meta name="author" content="Kathleen Matthews">
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/vendor/modernizr.js"></script>  
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/modernizr.js"></script>  
   </head> 
   <body>
-    <section class = "container">
-    	
-      <div id="color1" class="chip"></div>
-      <div id="color3" class="chip"></div>
-      <div id="color2" class="chip"></div>
-      
+    <header>
+      <h1>Hex Mix</h1>
+    </header>
+    <section class = "main">
+      <section class = "input_container">
+        <p class = "input_label">I want to mix:</p>
+        <input id="user_input1" type="text">
+        <p class = "input_label">with:</p>
+        <input id="user_input2" type="text"> 
+        <button class="mix">Mix!</button>
+      </section>
+      <section class = "chip_container">
+        <div id="color1_chip" class="chip"></div>
+        <div id="color3_chip" class="chip"></div>
+        <div id="color4_chip" class="chip"></div>
+        <div id="color5_chip" class="chip"></div>
+        <div id="color2_chip" class="chip"></div> 
+      </section>   
     </section>
-    <script type="text/javascript" src="js/hex.js"></script>
-    <script type="text/javascript" src="js/hex_ui.js"></script>
+    <footer>
+      <a href="https://github.com/kathmath/hex_mix" target="_blank">Check out the source on Github.
+      </a>
+    </footer>
+
+    <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>
 

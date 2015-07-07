@@ -50,11 +50,22 @@ module.exports = function(grunt) {
 	    build: {
 	      src: 'css/*.css'
 	    }
+  	},
+  	watch: {
+  		js: {
+  			files: ['src/js/*.js'],
+  			tasks: ['uglify:dev']
+  		},
+  		css: {
+  			files: ['src/scss/**/*.scss'],
+  			tasks: ['sass:dev']
+  		}
   	}
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-postcss');
 
@@ -64,23 +75,3 @@ module.exports = function(grunt) {
 
 };
 
-/*module.exports = function(grunt) {
-    require('grunt-postcss')(grunt);
-
-    grunt.initConfig({
-        postcss: {
-            options: {
-                map: true,
-                processors: [
-                    require('autoprefixer-core')({
-                        browsers: ['last 2 versions']
-                    })
-                ]
-            },
-            dist: {
-                src: 'css/*.css'
-            }
-        }
-    });
-
-    grunt.registerTask('default', ['postcss:dist']);*/

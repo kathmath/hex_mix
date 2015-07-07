@@ -2,7 +2,7 @@
 
 //VALIDATE USER INPUT
 
-//verify valid: 1-9 or A-F & 3 or 6 char long
+//verify valid: 1-9 or A-F & 3 or 6 characters long
 
 var validate_input = function (str) {
 	var valid_hex = /^[a-f0-9]{6}$/i; 
@@ -63,22 +63,22 @@ var int_array = function (arr) {
 
 //MIX COLORS
 
-//mix colors - average arrays, convert "mixed" array to string
+//mix colors - multiply elements, convert "mixed" array to string
 
 
-var mixed_color = function (arr1, arr2) {
+/*var mixed_color = function (arr1, arr2) {
 	var arr = [];
 	for (var i = 0; i < arr1.length; i++) {
 		arr[i] = Math.round((arr1[i] + arr2[i]) / 2) ; //round for valid hex numbers - 50/50 mix
 	}
 	return arr;
-}
+}*/
 
 var mixed_color = function (arr1, arr2, percent) {
 	var arr = [];
 	var percent = percent/100;
 	for (var i = 0; i < arr1.length; i++) {
-		arr[i] = Math.round(percent * arr1[i] + (1-percent) * arr2[i]) ; //round for valid hex numbers - 50/50 mix
+		arr[i] = Math.round(percent * arr1[i] + (1-percent) * arr2[i]) ; 
 	}
 	return arr;
 }

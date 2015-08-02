@@ -3,13 +3,17 @@
 //VALIDATE USER INPUT
 
 //verify valid: 1-9 or A-F & 3 or 6 characters long
+//consider using standard HTML5 form validation. using pattern ^[a-fA-F0-9]{6}$ bc case insensitive is not a valid pattern
 
-var validate_input = function (str) {
+var validate_input = function (str, id) {
 	var valid_hex = /^[a-f0-9]{6}$/i; 
 	if(!valid_hex.test(str)) {
-		alert("Please enter a valid hex code. Valid hex values are 6 characters long and contain the numbers 1-9 and/or letters A-F");
+		document.getElementById(id).className = "invalid";
+		var errorMessage = "Please enter a valid hex code. Valid hex values are 6 characters long and contain the numbers 1-9 and/or letters A-F";
+		element.appendChild(errorMessage);
 		return false;
 	} else {
+		document.getElementById(id).className = "valid";
 		return true;
 	}
 }
@@ -61,19 +65,11 @@ var int_array = function (arr) {
 	return arr;
 }
 
+
+
 //MIX COLORS
 
 //mix colors - multiply elements, convert "mixed" array to string
-
-
-/*var mixed_color = function (arr1, arr2) {
-	var arr = [];
-	for (var i = 0; i < arr1.length; i++) {
-		arr[i] = Math.round((arr1[i] + arr2[i]) / 2) ; //round for valid hex numbers - 50/50 mix
-	}
-	return arr;
-}*/
-
 var mixed_color = function (arr1, arr2, percent) {
 	var arr = [];
 	var percent = percent/100;
@@ -84,7 +80,6 @@ var mixed_color = function (arr1, arr2, percent) {
 }
 
 //convert any 2-digit numbers to letters
-
 var num_to_lett = function (arr) {
 	var arr = arr; 
 	for (var i = 0; i < arr.length; i++) {
@@ -109,7 +104,6 @@ var num_to_lett = function (arr) {
 
 
 //convert array to string
-
 var arr_to_str = function (arr) {
 	var arr = arr;
 	var str = arr.join(""); //convert back to string

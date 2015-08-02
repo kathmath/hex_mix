@@ -50,6 +50,14 @@ input {
   @include element;
 }
 
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
 .mix {
   @include element;
   background-color: #444;
@@ -78,19 +86,19 @@ input {
 }
 
 #color2_chip {
-  background-color: #BB0044;
+  background-color: #0000FF;
 }
 
 #color3_chip {
-  background-color: #880088;
+  background-color: #BB0044;
 }
 
 #color4_chip {
-  background-color: #4400BB;
+  background-color: #880088;
 }
 
 #color5_chip {
-  background-color: #0000FF;
+  background-color: #4400BB;
 }
 
 
@@ -164,18 +172,25 @@ h3 {
   border: 2px solid #0000FF;
 }
 
-.pick_container {
+.user_pick {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1em; 
-
 }
+
+.pick_container {
+  display: flex;
+  margin: 1em; 
+}
+
+#user_hex  {
+    width: 100%;
+  }
 
 /* COLOR PICK SEC END*/
 
 
-@media (min-width: 500px) { 
+@media (min-width: 700px) { 
 
   header {
   margin: 100px 16px;

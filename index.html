@@ -15,9 +15,9 @@
     <section class = "main">
       <section class = "input_container">
         <p class = "input_label">I want to mix:</p>
-        <input id="user_input1" name="user_input1" type="text" placeholder="FF0000">
+        <input id="user_input1" name="user_input1" type="text" pattern = "^[a-fA-F0-9]{6}$" required>
         <p class = "input_label">with:</p>
-        <input id="user_input2" name="user_input2" type="text" placeholder="0000FF">
+        <input id="user_input2" name="user_input2" type="text" pattern = "^[a-fA-F0-9]{6}$" required>
         <button class="mix" onclick="mix();">Mix!</button>
       </section>
       <h2>*Valid Hex Codes are 6 characters long and contain the numbers 0-9 and/or letters A-F.</h2>

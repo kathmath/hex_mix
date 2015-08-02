@@ -1,17 +1,12 @@
 
-// //initial display
-// var color1 = "ffffff"; //starts white
-// var color3 = "777777"; //starts grey
-// var color2 = "000000"; //starts black
-
 function mix() {
 
 //get colors from user & validate
 
 	var user_input1 = document.getElementById("user_input1").value;
-	//validate_input(user_input1);
+	var check_input1 = validate_input(user_input1, "user_input1");
 	var user_input2 = document.getElementById("user_input2").value;
-	//validate_input(user_input2);
+	var check_input2 = validate_input(user_input2, "user_input2");
 
 	//use user input colors, mix 
 
@@ -36,16 +31,4 @@ function mix() {
 
 }
 
-	/*
-	//inject into HTML & CSS
-
-	//create color chips
-	var color1_chip = document.createElement("div");
-	var color2_chip = document.createElement("div");
-	var color3_chip = document.createElement("div");
-
-	//modify color chips
-	color1_chip.className = "chip";
-	color2_chip.className = "chip";
-	color3_chip.className = "chip";*/
-
+	

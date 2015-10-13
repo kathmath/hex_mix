@@ -10,7 +10,7 @@ var validate_input = function (str, id) {
 	if(!valid_hex.test(str)) {
 		document.getElementById(id).className = "invalid";
 		var errorMessage = "Please enter a valid hex code. Valid hex values are 6 characters long and contain the numbers 1-9 and/or letters A-F";
-		element.appendChild(errorMessage);
+		alert(errorMessage);
 		return false;
 	} else {
 		document.getElementById(id).className = "valid";
